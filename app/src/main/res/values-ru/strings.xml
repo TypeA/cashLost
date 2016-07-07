@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Учет расходов</string>
+    <string name="addMenuItem">Добавить</string>
+    <string name="backMenuItem">Назад</string>
+    <string name="addScreenTitle">Данные покупки</string>
+    <string name="costAnnotation">Стоимость</string>
+    <string name="costHint">Введите стоимость</string>
+    <string name="placeAnnotation">Место покупки</string>
+    <string name="placeHint">Введите место покупки</string>
+    <string name="purchaseTypeAnnotation">Тип покупки</string>
+    <string name="purchaseNameAnnotation">Название покупки</string>
+    <string name="purchaseNameHint">Введите информацию о покупке</string>
+    <string name="purchaseDateAnnotation">Дата покупки</string>
+    <string name="purchaseDateHint">Нажмите для открытия календаря</string>
+    <string name="emptyFields">Пожалуйста, заполните все поля</string>
+    <string name="saveButton">Сохранить</string>
+    <array name="purchaseTypes">
+        <item>Электроника</item>
+        <item>Еда</item>
+        <item>Досуг</item>
+        <item>Путешествия</item>
+        <item>Другое</item>
+    </array>
+</resources>

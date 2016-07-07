@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CashLost</string>
+    <string name="addMenuItem">Add</string>
+    <string name="backMenuItem">Back</string>
+    <string name="addScreenTitle">Your purchase</string>
+    <string name="costAnnotation">Cost</string>
+    <string name="costHint">Enter the cost</string>
+    <string name="placeAnnotation">Place</string>
+    <string name="placeHint">Enter the place of purchase</string>
+    <string name="purchaseTypeAnnotation">Type of purchase</string>
+    <string name="purchaseNameAnnotation">Name of purchase</string>
+    <string name="purchaseNameHint">Enter smth about your purchase</string>
+    <string name="purchaseDateAnnotation">Date of purchase</string>
+    <string name="purchaseDateHint">Tap to open calendar</string>
+    <string name="emptyFields">Please fill all fields</string>
+    <string name="saveButton">Save</string>
+    <array name="purchaseTypes">
+        <item>Electronics</item>
+        <item>Food</item>
+        <item>Leisure</item>
+        <item>Travel</item>
+        <item>Other</item>
+    </array>
+</resources>
