@@ -6,7 +6,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class MainScreen extends AppCompatActivity {
+
+    ArrayList<PurchaseItem> purchases = new ArrayList<PurchaseItem>();
+
+    private final int REQUEST_CODE = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +31,20 @@ public class MainScreen extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.addMenuItem: {
                 Intent intent = new Intent(this, AddScreen.class);
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_CODE);
                 return true;
             }
             default: {
                 return false;
             }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null) {
+            purchases.add((PurchaseItem) data.getSerializableExtra(AddScreen.PURCHASE_ITEM_KEY));
+            int i;
         }
     }
 }

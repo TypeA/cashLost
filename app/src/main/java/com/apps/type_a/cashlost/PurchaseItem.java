@@ -8,16 +8,16 @@ import java.io.Serializable;
 public class PurchaseItem implements Serializable {
     private String place;
     private String name;
-    private Double cost;
+    private int cost;
     private PurchaseDate date;
-    private String purchaseType;
+    private int purchaseTypeID;
 
-    public PurchaseItem(String place, String name, Double cost, PurchaseDate date, String purchaseType) {
+    public PurchaseItem(String place, String name, int cost, PurchaseDate date, int purchaseTypeID) {
         this.place = place;
         this.name = name;
         this.cost = cost;
         this.date = date;
-        this.purchaseType = purchaseType;
+        this.purchaseTypeID = purchaseTypeID;
     }
 
     public String getPlace() {
@@ -28,7 +28,7 @@ public class PurchaseItem implements Serializable {
         return name;
     }
 
-    public Double getCoast() {
+    public int getCoast() {
         return cost;
     }
 
@@ -36,8 +36,8 @@ public class PurchaseItem implements Serializable {
         return date;
     }
 
-    public String getPurchaseType() {
-        return purchaseType;
+    public int getPurchaseTypeID() {
+        return purchaseTypeID;
     }
 
     public void setPlace(String place) {
@@ -48,7 +48,7 @@ public class PurchaseItem implements Serializable {
         this.name = name;
     }
 
-    public void setCoast(Double coast) {
+    public void setCoast(int coast) {
         this.cost = coast;
     }
 
@@ -56,7 +56,7 @@ public class PurchaseItem implements Serializable {
         this.date = date;
     }
 
-    public void setPurchaseType(String purchaseType) {
-        this.purchaseType = purchaseType;
+    public void setPurchaseTypeID(int purchaseTypeID) {
+        this.purchaseTypeID = purchaseTypeID;
     }
 }

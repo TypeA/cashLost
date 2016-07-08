@@ -3,6 +3,7 @@ package com.apps.type_a.cashlost;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -17,6 +18,8 @@ import android.widget.Toast;
  * Created by Type_A on 06.07.2016.
  */
 public class AddScreen extends AppCompatActivity {
+
+    public static final String PURCHASE_ITEM_KEY = "purchase_item";
 
     EditText place, cost, name, date;
     Spinner type;
@@ -62,6 +65,17 @@ public class AddScreen extends AppCompatActivity {
                     Toast.makeText(AddScreen.this, R.string.emptyFields, Toast.LENGTH_SHORT).show();
                 } else {
                     PurchaseDate currentDate = parseDateFromString(date.getText().toString());
+                    PurchaseItem item = new PurchaseItem(
+                            place.getText().toString(),
+                            name.getText().toString(),
+                            Integer.valueOf(cost.getText().toString()),
+                            currentDate,
+                            type.getSelectedItemPosition()
+                    );
+                    Intent intent = new Intent();
+                    intent.putExtra(PURCHASE_ITEM_KEY, item);
+                    setResult(RESULT_OK, intent);
+                    finish();
                 }
             }
         });
@@ -88,10 +102,10 @@ public class AddScreen extends AppCompatActivity {
 
 
     private PurchaseDate parseDateFromString(String date) {
-        String[] parsed = date.split(".");
-        int day = Integer.valueOf(parsed[1]);
-        int month = Integer.valueOf(parsed[2]);
-        int year = Integer.valueOf(parsed[3]);
+        String[] parsed = date.split("\\.");
+        int day = Integer.valueOf(parsed[0]);
+        int month = Integer.valueOf(parsed[1]);
+        int year = Integer.valueOf(parsed[2]);
         return new PurchaseDate(day, month, year);
     }
 

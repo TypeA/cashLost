@@ -54,7 +54,8 @@
         android:id="@+id/purchaseTypeSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/purchaseTypeAnnotation" />
+        android:layout_below="@+id/purchaseTypeAnnotation"
+        android:entries="@array/purchaseTypes"/>
 
     <TextView
         android:id="@+id/purchaseNameAnnotation"
