@@ -3,6 +3,7 @@ package com.apps.type_a.cashlost;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,7 +30,13 @@ public class MainScreen extends AppCompatActivity {
         empty = (RelativeLayout) findViewById(R.id.emptyView);
         main = (RelativeLayout) findViewById(R.id.mainView);
         purchaseList = (RecyclerView) findViewById(R.id.listOfPurchases);
+    }
 
+    private void fillPurchaseList() {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        purchaseList.setLayoutManager(layoutManager);
+        purchaseList.setAdapter(new PurchaseListAdapter(purchases,this));
     }
 
     @Override
@@ -58,6 +65,7 @@ public class MainScreen extends AppCompatActivity {
             purchases.add((PurchaseItem) data.getSerializableExtra(AddScreen.PURCHASE_ITEM_KEY));
             empty.setVisibility(View.INVISIBLE);
             main.setVisibility(View.VISIBLE);
+            fillPurchaseList();
         }
     }
 }
