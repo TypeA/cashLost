@@ -11,13 +11,17 @@ import java.util.ArrayList;
 public class MainScreen extends AppCompatActivity {
 
     ArrayList<PurchaseItem> purchases = new ArrayList<PurchaseItem>();
-
     private final int REQUEST_CODE = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
+        initViews();
+    }
+
+    private void initViews() {
+
     }
 
     @Override
