@@ -3,4 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="textViews_left_padding">5dp</dimen>
+    <dimen name="placeholder_font_size">28sp</dimen>
 </resources>

@@ -21,4 +21,5 @@
         <item>Travel</item>
         <item>Other</item>
     </array>
+    <string name="emptyPlaceholder">There is nothing to show. \nPlease add your purchase.</string>
 </resources>

@@ -3,8 +3,11 @@ package com.apps.type_a.cashlost;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -12,6 +15,8 @@ public class MainScreen extends AppCompatActivity {
 
     ArrayList<PurchaseItem> purchases = new ArrayList<PurchaseItem>();
     private final int REQUEST_CODE = 0;
+    RelativeLayout empty, main;
+    RecyclerView purchaseList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,9 @@ public class MainScreen extends AppCompatActivity {
     }
 
     private void initViews() {
+        empty = (RelativeLayout) findViewById(R.id.emptyView);
+        main = (RelativeLayout) findViewById(R.id.mainView);
+        purchaseList = (RecyclerView) findViewById(R.id.listOfPurchases);
 
     }
 
@@ -48,7 +56,8 @@ public class MainScreen extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null) {
             purchases.add((PurchaseItem) data.getSerializableExtra(AddScreen.PURCHASE_ITEM_KEY));
-            int i;
+            empty.setVisibility(View.INVISIBLE);
+            main.setVisibility(View.VISIBLE);
         }
     }
 }
