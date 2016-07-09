@@ -1,6 +1,7 @@
 package com.apps.type_a.cashlost;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,10 +36,12 @@ public class PurchaseListAdapter extends RecyclerView.Adapter<PurchaseListAdapte
                 items.get(position).getDate().getMonth()
                 + "." +
                 items.get(position).getDate().getYear();
+        Integer cost = items.get(position).getCost();
+        String place = "("+items.get(position).getPlace()+")";
         holder.purchaseName.setText(items.get(position).getName());
-        holder.purchaseCost.setText(items.get(position).getCoast());
+        holder.purchaseCost.setText(cost.toString());
         holder.purchaseDate.setText(date);
-        holder.purchasePlace.setText(items.get(position).getPlace());
+        holder.purchasePlace.setText(place);
     }
 
     @Override

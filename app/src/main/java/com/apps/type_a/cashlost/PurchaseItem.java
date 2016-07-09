@@ -28,7 +28,7 @@ public class PurchaseItem implements Serializable {
         return name;
     }
 
-    public int getCoast() {
+    public int getCost() {
         return cost;
     }
 
@@ -48,8 +48,8 @@ public class PurchaseItem implements Serializable {
         this.name = name;
     }
 
-    public void setCoast(int coast) {
-        this.cost = coast;
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 
     public void setDate(PurchaseDate date) {
