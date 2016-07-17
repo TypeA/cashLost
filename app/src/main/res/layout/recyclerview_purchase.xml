@@ -8,6 +8,9 @@
         android:id="@+id/purchaseName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/coloredSquare"
+        android:padding="@dimen/textViews_left_padding"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -17,6 +20,7 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/purchaseName"
         android:layout_toRightOf="@+id/purchaseName"
+        android:padding="@dimen/textViews_left_padding"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/secondary_text_light_nodisable" />
 
@@ -27,14 +31,26 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:padding="@dimen/textViews_left_padding"
         android:textColor="@android:color/secondary_text_light_nodisable" />
 
     <TextView
         android:id="@+id/purchaseCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="@dimen/textViews_left_padding"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_below="@+id/purchaseName"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_alignLeft="@+id/purchaseName"
+        android:layout_alignStart="@+id/purchaseName" />
+
+    <TextView
+        android:id="@+id/coloredSquare"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

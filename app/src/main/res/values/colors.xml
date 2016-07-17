@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="electronics">#bc5b45</color>
+    <color name="food">#3eaf55</color>
+    <color name="leisure">#e1c442</color>
+    <color name="travel">#5657ae</color>
+    <color name="other">#9e84a3</color>
 </resources>

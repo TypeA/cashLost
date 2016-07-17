@@ -14,6 +14,8 @@
     <string name="purchaseDateHint">Tap to open calendar</string>
     <string name="emptyFields">Please fill all fields</string>
     <string name="saveButton">Save</string>
+    <string name="allPurchaseCostAnnotation">All cost:</string>
+    <string name="rub" translatable="false">rub.</string>
     <array name="purchaseTypes">
         <item>Electronics</item>
         <item>Food</item>

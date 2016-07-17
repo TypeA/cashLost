@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:text="@string/emptyPlaceholder"
+            android:textAlignment="center"
             android:textSize="@dimen/placeholder_font_size" />
 
     </RelativeLayout>
@@ -30,10 +31,26 @@
         android:layout_height="match_parent"
         android:visibility="invisible">
 
+        <TextView
+            android:id="@+id/allPurchasesCostAnnotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/allPurchaseCostAnnotation"
+            android:textSize="@dimen/placeholder_font_size" />
+
+        <TextView
+            android:text="1111111111111111111"
+            android:layout_alignParentRight="true"
+            android:id="@+id/allPurchasesCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/placeholder_font_size" />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/listOfPurchases"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@id/allPurchasesCostAnnotation" />
 
     </RelativeLayout>
 
